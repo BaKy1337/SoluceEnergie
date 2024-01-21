@@ -1,0 +1,22 @@
+<div class="solutions__section">
+    <div class="title__section">
+      <h1>Nos solutions</h1>
+      <div class="separator"></div>
+      <h3>Pour réussir votre transition énergétique</h3>
+    </div>
+    <div class="keen-slider" #sliderRef>
+      <div class="keen-slider__slide" *ngFor="let solution of solutions">
+        <img [src]="solution.img" [alt]="solution.alt">
+        <div class="solution__content">
+          <h1>{{solution.title}}</h1>
+          <ul>
+            <li *ngFor="let list of solution.list">{{list}}</li>
+          </ul>
+          <div class="see__more">
+            <a href="#">En savoir plus</a>
+            <img src="../../../assets/icons/search-zoom-in.svg" alt="icone en savoir plus">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

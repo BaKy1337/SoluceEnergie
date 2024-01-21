@@ -1,0 +1,17 @@
+<div class="services__section">
+  <div class="title__section">
+    <h1>Nos solutions</h1>
+    <div class="separator"></div>
+    <h3>Pour réussir votre transition énergétique</h3>
+  </div>
+</div>
+
+<div class="container">
+    <div class="col" *ngFor="let service of listServices">
+        <div class="icon">
+            <img [src]="service.icon" [alt]="service.alt">
+        </div>
+        <h1>{{service.title}}</h1>
+        <p>{{service.text}}</p>
+    </div>
+  </div>

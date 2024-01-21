@@ -1,0 +1,121 @@
+.main__card {
+  max-width: 1300px;
+  margin: 12rem auto;
+  position: relative;
+  .bg {
+    background-position: center center;
+    background-size: cover;
+    height: 435px;
+    width: 100%;
+    margin: auto;
+    box-shadow: 0 60px 160px 0 rgba(7, 104, 190, 0.16);
+    border-radius: 1rem;
+  }
+  .description {
+    color: #fff;
+    padding: 3.5rem;
+    width: 800px;
+    background: rgba(0, 19, 55, 0.6);
+    backdrop-filter: blur(2rem);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    position: absolute;
+    top: -7rem;
+    left: 3rem;
+    border-radius: 1rem;
+    h1 {
+      font-weight: bold;
+      font-size: 3rem;
+    }
+    p {
+      font-weight: 400;
+      font-size: 1.25rem;
+    }
+  }
+
+  .partenaires {
+    display: grid;
+    background: rgba(255, 255, 255, 0.75);
+    position: absolute;
+    width: 85%;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -7rem;
+    grid-template-columns: auto auto auto auto;
+    backdrop-filter: blur(1rem);
+    border-radius: 1.5rem;
+    grid-row-gap: 2rem;
+    grid-column-gap: 7rem;
+    padding: 1rem 4rem;
+    img {
+      height: 5rem;
+      margin: auto;
+    }
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .main__card {
+    padding: 1rem;
+    .description {
+      width: 550px;
+      padding: 2.5rem;
+      top: -4rem;
+      h1 {
+        font-size: 2rem;
+      }
+      p {
+        font-size: 1rem;
+      }
+    }
+
+    .partenaires {
+      width: 100%;
+      border-radius: 0;
+      grid-template-columns: auto auto auto;
+      grid-row-gap: 1rem;
+      grid-column-gap: 0;
+      bottom: -7rem;
+      img {
+        height: 2rem;
+      }
+      img:nth-child(3),
+      img:nth-child(6),
+      img:nth-child(7) {
+        height: 5rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main__card {
+    .description {
+      top: -2rem;
+      padding: 1.5rem;
+      width: 75%;
+      h1 {
+        font-size: 1rem;
+      }
+      p {
+        font-size: 0.8rem;
+      }
+    }
+
+    .partenaires {
+      grid-template-columns: auto auto;
+      bottom: -8rem;
+      padding: 1rem;
+      grid-column-gap: 0.5rem;
+      img {
+        height: 1.5rem;
+      }
+      img:nth-child(3),
+      img:nth-child(6),
+      img:nth-child(7) {
+        height: 4.25rem;
+      }
+    }
+  }
+}

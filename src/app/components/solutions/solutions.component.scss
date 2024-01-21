@@ -1,0 +1,132 @@
+.solutions__section {
+  position: relative;
+  margin-top: 3rem;
+  .title__section {
+    max-width: 1300px;
+    padding: 3rem 3rem 0;
+    margin: auto;
+    h1 {
+      text-transform: uppercase;
+      font-size: 2.25rem;
+      color: #47bab8;
+    }
+    .separator {
+      width: 6rem;
+      background-color: #47bab8;
+      height: 0.25rem;
+      border-radius: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    h3 {
+      font-size: 2rem;
+      font-weight: 500;
+      color: #202636;
+    }
+  }
+
+  .keen-slider {
+    display: flex;
+    overflow: hidden;
+    padding: 4rem 0;
+    .keen-slider__slide {
+      border-radius: 1.5rem;
+      img {
+        border-radius: 1.5rem 1.5rem 0 0;
+        box-shadow: 35px -15px 80px 0 rgba(113, 144, 190, 0.08);
+      }
+      .solution__content {
+        box-shadow: 35px 0 133px 0 rgba(113, 144, 190, 0.08);
+        border-radius: 0 0 1.5rem 1.5rem;
+        background-color: rgba(255, 255, 255, 0.6);
+        backdrop-filter: blur(8px);
+        border: 0.25rem solid #fff;
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        h1 {
+          font-weight: bold;
+          font-size: 1rem;
+          text-transform: uppercase;
+          color: #245a9c;
+        }
+        ul {
+          list-style-type: none;
+          padding: 0;
+          display: flex;
+          flex-direction: column;
+          gap: .5rem;
+          li {
+            font-weight: 400;
+            font-size: 1rem;
+            color: #737b8f;
+          }
+        }
+        .see__more {
+          display: flex;
+          gap: 0.5rem;
+          align-items: center;
+          a {
+            font-weight: 500;
+            font-size: 1rem;
+            color: #47bab8;
+          }
+          img {
+            width: 24px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .solutions__section {
+    .title__section {
+      padding: 2rem 1rem 0;
+      h1 {
+        font-size: 2rem;
+      }
+      h3 {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  .keen-slider {
+    padding: 3rem 0;
+    .keen-slider__slide {
+      .solution__content {
+        ul {
+          li {
+            font-size: .875rem !important;
+          }
+        }
+        .see__more {
+          a {
+            font-size: .875rem !important;
+          }
+          img {
+            width: 16px !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .solutions__section {
+    .title__section {
+      h1 {
+        font-size: 1.25rem;
+      }
+      .separator {
+        width: 3rem;
+      }
+      h3 {
+        font-size: 1rem;
+      }
+    }
+  }
+}

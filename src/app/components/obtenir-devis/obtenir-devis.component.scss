@@ -1,0 +1,117 @@
+.devis__card {
+  position: relative;
+  overflow: hidden;
+  background: #245a9c;
+  border-radius: 1.5rem;
+  box-shadow: 25px 25px 100px 0 rgba(36, 90, 156, 0.08);
+  padding: 4rem;
+  max-width: 1248px;
+  margin: auto;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    line-height: 130%;
+    max-width: 550px;
+  }
+  h3 {
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 2rem;
+    max-width: 550px;
+  }
+  .btn {
+    transition: 0.3s;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2rem;
+    width: fit-content;
+    background: #47bab8;
+    border-radius: 0.875rem;
+    cursor: pointer;
+    a {
+      font-size: 1rem;
+      font-weight: 500;
+    }
+  }
+  .btn:hover {
+    background: #47bab8a6;
+    img {
+      animation: rotate-center 0.6s ease-in-out both;
+    }
+  }
+
+  .dot {
+    width: 15rem;
+    height: 15rem;
+    background: #47bab8;
+    border-radius: 50%;
+    position: absolute;
+    top: -4rem;
+    right: -4rem;
+  }
+  .audit {
+    position: absolute;
+    width: 35rem;
+    top: 2rem;
+    right: 3rem;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .devis__card {
+    margin: 1rem;
+    h1,
+    h3 {
+      max-width: fit-content;
+      z-index: 1;
+    }
+    .btn {
+      width: auto;
+      z-index: 1;
+    }
+    .dot {
+      opacity: 0.1;
+    }
+    .audit {
+      opacity: 0.1;
+      top: 2rem;
+      right: 1rem;
+      width: 30rem;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .devis__card {
+    padding: 2rem;
+    h1{
+        font-size: 1.5rem;
+    }
+    h3{
+        font-size: 1rem;
+    }
+    .btn {
+      a{
+        font-size: 1rem;
+      }
+      img{
+        display: none;
+      }
+    }
+  }
+}
+
+@keyframes rotate-center {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,56 @@
+<div class="contact__container">
+    <h1>Contactez-Nous</h1>
+    <p>Veuillez nous appelez ou compléter le formulaire ci-dessous, nous vous répondrons rapidement !</p>
+    <div class="contact__section">
+        <div class="contact__info info__contact">
+            <div class="info">
+                <img src="../../../assets/icons/call-calling.svg" alt="icone de téléphone">
+                <a href="">+33 6 51 93 48 08</a>
+            </div>
+            <div class="info">
+                <img src="../../../assets/icons/mail.svg" alt="icone d'email">
+                <a href="">contact@soluce-energie.fr</a>
+            </div>
+            <div class="info">
+                <img src="../../../assets/icons/location.svg" alt="icone de localisation">
+                <a href="">48 Rue Claude Balbastre <br/> Montpellier, France</a>
+            </div>
+        </div>
+        <div class="contact__form">
+            <div class="input__1">
+                <input #fullname type="text" name="fullname" placeholder="Nom et prénom" (input)="inputChanges('fullname', fullname)">
+                <div class="separator"></div>
+                <img src="../../../assets/icons/profile.svg" alt="icone d'utilisateur">
+            </div>
+            <div class="input__2">
+                <div class="input">
+                    <input #email type="email" name="email" placeholder="Email" (input)="inputChanges('email', email)">
+                    <div class="separator"></div>
+                    <img src="../../../assets/icons/mail.svg" alt="icone d'email">
+                </div>
+                <div class="input">
+                    <input #phone type="tel" maxlength="10" placeholder="Numéro de téléphone" (input)="inputChanges('phone', phone)">
+                    <div class="separator"></div>
+                    <img src="../../../assets/icons/call-calling.svg" alt="icone de téléphone">
+                </div>
+            </div>
+            <div class="projects">
+                <article (click)="selectProject(project)" *ngFor="let project of listOfProjects" class="project" [ngClass]="selectedProjects.includes(project) ? 'selected':''">{{project}}</article>
+            </div>
+            <div class="input__1 textarea">
+                <textarea #message name="message" rows="9" placeholder="Message" (input)="inputChanges('message', message)"></textarea>
+                <div class="separator"></div>
+                <img src="../../../assets/icons/message-text.svg" alt="icone de message texte">
+            </div>
+            <button class="btn__submit" (click)="sendEmail()">Envoyer</button>
+        </div>
+    </div>
+
+
+
+    <!-- Reseaux sociaux -->
+    <div class="socials">
+        <a href="https://www.facebook.com/groupesoluceenergie?locale=fr_FR" target="_blank"><img src="../../../assets/icons/facebook.svg" alt="facebook logo"></a>
+        <a href="https://www.instagram.com/soluceenergie/" target="_blank"><img src="../../../assets/icons/instagram.svg" alt="instagram logo"></a>
+    </div>
+</div>
