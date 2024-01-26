@@ -16,11 +16,13 @@
     "@angular/compiler": "^16.2.0",
     "@angular/core": "^16.2.0",
     "@angular/forms": "^16.2.0",
+    "@angular/http": "^7.2.16",
     "@angular/material": "^16.2.13",
     "@angular/platform-browser": "^16.2.0",
     "@angular/platform-browser-dynamic": "^16.2.0",
     "@angular/router": "^16.2.0",
     "@emailjs/browser": "^3.12.1",
+    "jquery": "^3.7.1",
     "keen-slider": "^6.8.6",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
@@ -31,12 +33,14 @@
     "@angular/cli": "~16.2.2",
     "@angular/compiler-cli": "^16.2.0",
     "@types/jasmine": "~4.3.0",
+    "@types/jquery": "^3.5.29",
     "jasmine-core": "~4.6.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
+    "shave": "^5.0.4",
     "typescript": "~5.1.3"
   }
 }

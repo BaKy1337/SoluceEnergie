@@ -1,0 +1,45 @@
+.testimonials{
+    max-width: 1280px;
+    margin: 5rem auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-auto-rows: 1fr;
+    gap: 1.5rem;
+    .comment{
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(5px);
+        padding: 1.5rem 2rem;
+        text-align: center;
+        display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    border-radius: 1rem;
+    box-shadow: 25px 25px 100px 0 rgba(41, 95, 131, 0.08);
+        .header{
+            h2{
+                font-size: 1.5rem;
+                font-weight: bold;
+                color: #47bab8;
+            }
+            p{
+                font-size: 1rem;
+                font-style: italic;
+                color: #737B8F;
+            }
+        }
+        .message{
+            p{
+                color: #202636;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .testimonials{
+        padding: 0 1rem;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+    }
+}

@@ -1,121 +1,149 @@
-.main__card {
-  max-width: 1300px;
-  margin: 12rem auto;
+@mixin white-gradient {
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+.logos {
+  border-radius: 2rem;
   position: relative;
-  .bg {
-    background-position: center center;
-    background-size: cover;
-    height: 435px;
-    width: 100%;
-    margin: auto;
-    box-shadow: 0 60px 160px 0 rgba(7, 104, 190, 0.16);
-    border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(.5rem);
+  overflow: hidden;
+  display: flex;
+  height: 10rem;
+  align-items: center;
+  .logos-slide {
+    display: inline-block;
+    animation: 30s slide infinite linear;
+    white-space: nowrap;
+    img {
+      height: 2rem;
+      margin: 0 2rem;
+      display: inline-block;
+      max-width: fit-content;
+    }
   }
-  .description {
-    color: #fff;
-    padding: 3.5rem;
-    width: 800px;
-    background: rgba(0, 19, 55, 0.6);
-    backdrop-filter: blur(2rem);
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+  &::before,
+  &::after {
+    @include white-gradient;
+    content: "";
+    height: 10rem;
     position: absolute;
-    top: -7rem;
-    left: 3rem;
+    width: 200px;
+    z-index: 2;
+  }
+
+  &::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+  }
+
+  &::before {
+    left: 0;
+    top: 0;
+  }
+}
+.logos:hover {
+  .logos-slide {
+    animation-play-state: paused;
+  }
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.bg__partenaires{
+  position: relative;
+  border-radius: 1rem;
+    max-width: 1280px;
+    margin: 10rem auto;
+    height: 20rem;
+  .fingerTouch{
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 2rem;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  .description{
+    position: absolute;
+    z-index: 1;
+    background: rgba(0, 19, 55, 0.6);
+    width: 50%;
+    top: -5rem;
+    left: 5rem;
+    padding: 1rem 2rem;
     border-radius: 1rem;
-    h1 {
+    color: #fff;
+    backdrop-filter: blur(10px);
+    h2{
       font-weight: bold;
       font-size: 3rem;
     }
-    p {
-      font-weight: 400;
-      font-size: 1.25rem;
+    p{
+      font-size: 1rem;
+      line-height: 2rem;
     }
-  }
 
-  .partenaires {
-    display: grid;
-    background: rgba(255, 255, 255, 0.75);
+  }
+  .list__partenaires{
     position: absolute;
-    width: 85%;
+    bottom: -5rem;
+    width: 90%;
     left: 50%;
     transform: translateX(-50%);
-    bottom: -7rem;
-    grid-template-columns: auto auto auto auto;
-    backdrop-filter: blur(1rem);
-    border-radius: 1.5rem;
-    grid-row-gap: 2rem;
-    grid-column-gap: 7rem;
-    padding: 1rem 4rem;
-    img {
-      height: 5rem;
-      margin: auto;
-    }
   }
 }
 
-@media screen and (max-width: 1300px) {
-  .main__card {
-    padding: 1rem;
-    .description {
-      width: 550px;
-      padding: 2.5rem;
-      top: -4rem;
-      h1 {
-        font-size: 2rem;
-      }
-      p {
-        font-size: 1rem;
-      }
+@media screen and (max-width:1300px) {
+  .bg__partenaires{
+    margin: 10rem 1rem;
+    .description{
+      width: 60%;
     }
+    .list__partenaires{
+      width: calc(100% + 2rem);
+    left: -1rem;
+    transform: translateX(0);
+    }
+  }
+  .logos{
+    border-radius: 0;
+  }
+}
 
-    .partenaires {
-      width: 100%;
-      border-radius: 0;
-      grid-template-columns: auto auto auto;
-      grid-row-gap: 1rem;
-      grid-column-gap: 0;
-      bottom: -7rem;
-      img {
-        height: 2rem;
+@media screen and (max-width:768px) {
+  .bg__partenaires{
+    .description{
+      left: 2rem;
+      width: 80%;
+      h2{
+        font-size: 1.5rem;
       }
-      img:nth-child(3),
-      img:nth-child(6),
-      img:nth-child(7) {
-        height: 5rem;
+      p{
+        font-size: .875rem;
+        line-height: 1.5rem;
       }
     }
   }
 }
 
-@media screen and (max-width: 768px) {
-  .main__card {
-    .description {
-      top: -2rem;
-      padding: 1.5rem;
-      width: 75%;
-      h1 {
-        font-size: 1rem;
-      }
-      p {
-        font-size: 0.8rem;
-      }
-    }
-
-    .partenaires {
-      grid-template-columns: auto auto;
-      bottom: -8rem;
-      padding: 1rem;
-      grid-column-gap: 0.5rem;
-      img {
-        height: 1.5rem;
-      }
-      img:nth-child(3),
-      img:nth-child(6),
-      img:nth-child(7) {
-        height: 4.25rem;
-      }
+@media screen and (max-width:320px) {
+  .bg__partenaires{
+    .description{
+      top: -10rem;
     }
   }
 }

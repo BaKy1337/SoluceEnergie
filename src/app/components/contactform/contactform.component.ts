@@ -41,7 +41,7 @@ export class ContactformComponent {
       return;
     }
     emailjs.init('xlymoyHRoM-mCMQL9');
-    emailjs.send("service_6j0kynv","template_53or91r",{
+    emailjs.send("service_thxh7dk","template_53or91r",{
         fullname: this.fullname,
         email: this.email,
         phone: this.phone,

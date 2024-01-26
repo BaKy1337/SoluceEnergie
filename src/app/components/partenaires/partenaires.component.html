@@ -1,10 +1,27 @@
-<div class="main__card">
-    <img class="bg" src="../../../assets/fingerTouch.png" alt="fingerTouch">
+<div class="bg__partenaires">
+    <img class="fingerTouch" src="../../../assets/fingerTouch.png" alt="Partenaires">
     <div class="description">
-        <h1>Partenaires</h1>
+        <h2>Partenaires</h2>
         <p>Des alliances stratégiques renforçant notre capacité à proposer des solutions durables en énergies renouvelables et en rénovation énergétique. Ensemble, façonnons un avenir énergétique prometteur.</p>
     </div>
-    <div class="partenaires">
-        <img *ngFor="let partenaire of partenaires" src="{{partenaire}}">
+    <div class="list__partenaires">
+        <div class="logos">
+            <div class="logos-slide">
+              <a
+                *ngFor="let partenaire of partenaires"
+                href="{{ partenaire.link }}"
+                target="_blank"
+                ><img src="{{ partenaire.img }}" alt="{{ partenaire.alt }}"
+              /></a>
+            </div>
+            <div class="logos-slide">
+              <a
+                *ngFor="let partenaire of partenaires"
+                href="{{ partenaire.link }}"
+                target="_blank"
+                ><img src="{{ partenaire.img }}" alt="{{ partenaire.alt }}"
+              /></a>
+            </div>
+          </div>
     </div>
 </div>

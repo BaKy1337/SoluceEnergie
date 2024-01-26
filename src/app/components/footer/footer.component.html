@@ -13,29 +13,8 @@
       <div class="section solutions">
         <h1>Solutions</h1>
         <ul>
-          <li>
-            <a href="">Isolation des murs</a>
-          </li>
-          <li>
-            <a href="">Isolation des combles</a>
-          </li>
-          <li>
-            <a href="">Pompe à chaleur air eau</a>
-          </li>
-          <li>
-            <a href="">Pompe à chaleur air air</a>
-          </li>
-          <li>
-            <a href="">Chauffage solaire</a>
-          </li>
-          <li>
-            <a href="">Chauffe-eau thermodynamique</a>
-          </li>
-          <li>
-            <a href="">Chauffe-eau solaire</a>
-          </li>
-          <li>
-            <a href="">Panneaux photovoltaïques</a>
+          <li style="cursor: pointer;" *ngFor="let solution of solutions">
+            <a (click)="openDialog(solution.type)">{{solution.title}}</a>
           </li>
         </ul>
       </div>

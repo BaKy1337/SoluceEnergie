@@ -1,28 +1,5 @@
-<div class="hero__section">
-    <nav class="navbar">
-        <a class="company__logo">
-            <img src="../../../assets/logo_white.svg" alt="SOLUCE ENERGIE company logo">
-        </a>
-        <ul class="menu">
-            <li>
-                <a href="#">Vos aides</a>
-            </li>
-            <li>
-                <a href="#">Certifications</a>
-            </li>
-            <li>
-                <a href="#">Nos valeurs</a>
-            </li>
-            <li>
-                <a href="#">Blog</a>
-            </li>
-        </ul>
-        <div class="contact__us">
-            <a href="#">Contactez-nous</a>
-            <img src="../../../assets/icons/messages-bulles.svg" alt="discussion icon">
-        </div>
-    </nav>
-
+<div class="hero__section" id="heroSection">
+    <app-navbar></app-navbar>
     <div class="hero__content">
         <div class="title">
             <h1>Économisez de l'énergie en toute tranquillité.</h1>
@@ -30,7 +7,7 @@
         <div class="description">
             <h2>Une énergie fiable, rentable et répartissable</h2>
             <p>Nous sommes un cabinet d'experts spécialisé en rénovation énergétique, énergies renouvelables et amélioration de l'habitat, offrant des solutions clés en main. <br /><br /> Grâce à notre bureau d'études et nos poseurs salariés, nous proposons des solutions technologiques de pointe pour répondre à vos besoins.</p>
-            <button>
+            <button (click)="scrollTo('contactform')">
                 <span>Je demande mon étude</span>
                 <img src="../../../assets/icons/arrow-right.svg" alt="arrow right icon">
             </button>
@@ -42,5 +19,9 @@
 <app-obtenir-devis></app-obtenir-devis>
 <app-certifications></app-certifications>
 <app-partenaires></app-partenaires>
+<app-testimonials></app-testimonials>
 <app-contactform></app-contactform>
 <app-footer></app-footer>
+<div class="scrollToTop" (click)="scrollToTop()" id="scrollToTop">
+    <img src="../../../assets/icons/scrollTop.svg" alt="fleche vers le haut icone">
+</div>

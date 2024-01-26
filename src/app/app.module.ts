@@ -14,6 +14,18 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { FooterComponent } from './components/footer/footer.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { AidesComponent } from './pages/aides/aides.component';
+import { FaqComponent } from './pages/faq/faq.component';
+import { BlogComponent } from './pages/blog/blog.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import { SolutionModalComponent } from './components/solution-modal/solution-modal.component';
+import {MatButtonModule} from '@angular/material/button';
+import { TestimonialsComponent } from './components/testimonials/testimonials.component';
+import { HttpClientModule } from '@angular/common/http';
+import { NavbarColoredComponent } from './components/navbar-colored/navbar-colored.component';
+import { ArticleAidesComponent } from './pages/article-aides/article-aides.component';
+import { ModalContactComponent } from './components/modal-contact/modal-contact.component';
 
 
 @NgModule({
@@ -27,12 +39,24 @@ import { FooterComponent } from './components/footer/footer.component';
     PartenairesComponent,
     ContactformComponent,
     FooterComponent,
+    NavbarComponent,
+    AidesComponent,
+    FaqComponent,
+    BlogComponent,
+    SolutionModalComponent,
+    TestimonialsComponent,
+    NavbarColoredComponent,
+    ArticleAidesComponent,
+    ModalContactComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatDialogModule,
+    MatButtonModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

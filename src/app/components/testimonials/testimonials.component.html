@@ -1,0 +1,11 @@
+<div class="testimonials">
+    <div class="comment" *ngFor="let testimony of testimonials">
+        <div class="header">
+            <h2>{{testimony.title}}</h2>
+            <p>{{testimony.location}}</p>
+        </div>
+        <div class="message">
+            <p>{{testimony.text}}</p>
+        </div>
+    </div>
+</div>

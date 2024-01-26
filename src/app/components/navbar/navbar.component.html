@@ -1,0 +1,23 @@
+<nav class="navbar">
+    <a class="company__logo" routerLink="/accueil">
+        <img src="../../../assets/logo_white.svg" alt="SOLUCE ENERGIE company logo">
+    </a>
+    <ul class="menu">
+        <li>
+            <a routerLink="/aides-renovation-energetique">Vos aides</a>
+        </li>
+        <li>
+            <a (click)="scrollTo('certifications')" target="_self">Certifications</a>
+        </li>
+        <li>
+            <a routerLink="/">FAQ</a>
+        </li>
+        <li>
+            <a routerLink="/">Blog</a>
+        </li>
+    </ul>
+    <div class="contact__us">
+        <a (click)="scrollTo('contactform')">Contactez-nous</a>
+        <img src="../../../assets/icons/messages-bulles.svg" alt="discussion icon">
+    </div>
+</nav>

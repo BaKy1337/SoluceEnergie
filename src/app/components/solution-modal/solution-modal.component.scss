@@ -1,0 +1,47 @@
+header {
+  text-align: center;
+
+  h1 {
+    margin: 1rem auto 0;
+    color: #47bab8;
+    text-transform: uppercase;
+  }
+
+  img {
+    width: 90%;
+    height: 10rem;
+    border-radius: 0.5rem;
+    margin: 1rem auto;
+    object-fit: cover;
+  }
+}
+
+section {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+
+  h2 {
+    color: #47bab8;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+
+  h3 {
+    color: #245a9c;
+    margin-bottom: 1rem;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      margin-bottom: 1rem;
+    }
+  }
+
+  p {
+    margin-bottom: 1rem;
+  }
+}

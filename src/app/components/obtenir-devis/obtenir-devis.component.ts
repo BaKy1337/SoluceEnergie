@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./obtenir-devis.component.scss']
 })
 export class ObtenirDevisComponent {
-
+  scrollTo(target:string){
+    document.getElementById(target)!.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+      inline: "nearest"
+      });
+  }
 }

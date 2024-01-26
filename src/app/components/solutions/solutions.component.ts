@@ -1,6 +1,7 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import KeenSlider, { KeenSliderInstance } from "keen-slider";
-
+import { SolutionModalComponent } from '../solution-modal/solution-modal.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-solutions',
@@ -9,7 +10,7 @@ import KeenSlider, { KeenSliderInstance } from "keen-slider";
 })
 export class SolutionsComponent {
   @ViewChild("sliderRef") sliderRef!: ElementRef<HTMLElement>
-  
+
   solutions = [
     {
       img: '../../../assets/solutions/murs.png',
@@ -22,6 +23,7 @@ export class SolutionsComponent {
         'Eligible aux aides : MaPrimeRenov’, CEE et ECOPTZ',
         'Valorisation de votre bien',
       ],
+      type:"murs"
     },
     {
       img: '../../../assets/solutions/chauffe-eau-solaire.png',
@@ -33,6 +35,7 @@ export class SolutionsComponent {
         'Eligible aux aides : MaPrimeRenov’, CEE et ECOPTZ',
         'Valorisation de votre bien',
       ],
+      type:"ces"
     },
     {
       img: '../../../assets/solutions/thermodynamique.png',
@@ -45,6 +48,7 @@ export class SolutionsComponent {
         'Eligible aux aides : MaPrimeRenov’, CEE et ECOPTZ',
         'Valorisation de votre bien',
       ],
+      type:"cet"
     },
     {
       img: '../../../assets/solutions/aireau.png',
@@ -60,6 +64,7 @@ export class SolutionsComponent {
         'Eligible aux aides : MaPrimeRenov’, CEE et ECOPTZ',
         'Valorisation de votre bien',
       ],
+      type:"pacae"
     },
     {
       img: '../../../assets/solutions/combles.png',
@@ -72,6 +77,7 @@ export class SolutionsComponent {
         'Eligible aux aides : MaPrimeRenov’, CEE et ECOPTZ',
         'Valorisation de votre bien',
       ],
+      type:"combles"
     },
     {
       img: '../../../assets/solutions/chauffage-solaire.png',
@@ -86,6 +92,7 @@ export class SolutionsComponent {
         'Eligible aux aides : MaPrimeRenov’, CEE et ECOPTZ',
         'Valorisation de votre bien',
       ],
+      type:"cs"
     },
     {
       img: '../../../assets/solutions/airair.png',
@@ -99,6 +106,7 @@ export class SolutionsComponent {
         'Jusqu’a 70% d’économie d’énergie',
         'Valorisation de votre bien',
       ],
+      type:"pacaa"
     },
     {
       img: '../../../assets/solutions/photovoltaiques.png',
@@ -113,15 +121,19 @@ export class SolutionsComponent {
         'Garantie de 25 ans',
         'Valorisation de votre bien',
       ],
+      type:"panneaux"
     },
   ];
 
   slider!: KeenSliderInstance;
-  
+  currentSlide: number = 1;
+
+  constructor(public dialog: MatDialog) {}
 
   ngAfterViewInit() {
 
     this.slider = new KeenSlider(this.sliderRef.nativeElement, {
+      initial: this.currentSlide,
       loop: true,
       breakpoints: {
         "(min-width: 500px)": {
@@ -146,7 +158,7 @@ export class SolutionsComponent {
           slides: { perView: 3.2, spacing: 32, origin: "center" },
         },
         "(min-width: 1300px)": {
-          slides: { perView: 3.8, spacing: 32, origin: "center" },
+          slides: { perView: 3.5, spacing: 32, origin: "center" },
         },
         "(min-width: 1500px)": {
           slides: { perView: 4.2, spacing: 32, origin: "center" },
@@ -160,7 +172,24 @@ export class SolutionsComponent {
         
       },
       slides: { perView: 1.2, spacing: 16, origin: "center" },
+      slideChanged: (s) => {
+        this.currentSlide = s.track.details.rel
+      },
     })
+  }
+
+  openDialog(solution:string) {
+    this.dialog.open(SolutionModalComponent, {
+      data: {
+        myData: solution,
+      },
+      width: '98svw',
+      height:'98svh',
+      maxWidth: '100svw',
+      maxHeight: '100svh',
+      disableClose: true,
+      panelClass: 'solution__panel'
+    });
   }
 
   ngOnDestroy() {

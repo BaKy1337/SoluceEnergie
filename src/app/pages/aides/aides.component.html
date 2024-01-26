@@ -1,0 +1,98 @@
+<app-navbar-colored></app-navbar-colored>
+
+<div class="header">
+  <div class="box">
+    <h2>Vos aides à la rénovation énergétique</h2>
+    <h3>
+      Découvrez les aides financières disponibles pour financer vos travaux de
+      rénovation énergétique
+    </h3>
+    <p>
+      Vous souhaitez rénover votre habitat pour réduire vos factures d'énergie
+      et améliorer votre confort ? De nombreuses aides financières existent pour
+      vous aider à financer vos travaux.<br />Sur cette page, nous vous
+      présentons les aides les plus courantes, ainsi que les conditions pour en
+      bénéficier.
+    </p>
+    <div class="btn" (click)="contactForm()">
+      <a>Je demande mon étude</a>
+      <img src="../../../assets/icons/arrow-right.svg" alt="flèche droite" />
+    </div>
+  </div>
+  <div class="box">
+    <img
+      src="../../../assets/illustration/discount.svg"
+      alt="pourcentage aides"
+    />
+  </div>
+</div>
+
+<div class="card__grid">
+    <div
+      *ngFor="let aide of apiResponse.items; let i = index"
+      class="card card_{{ i }}"
+    >
+      <div *ngIf="aide && aide.fields">
+        <h2>{{ aide.fields.titre }}</h2>
+        <div
+          *ngIf="
+            aide.fields.contenu && aide.fields.contenu.nodeType === 'document'
+          "
+          class="shaveContent"
+        >
+          <ng-container *ngFor="let content of aide.fields.contenu.content">
+            <ng-container *ngIf="content.nodeType === 'paragraph'">
+              <p *ngIf="content.content.length > 0">
+                <ng-container *ngFor="let paragraphContent of content.content">
+                  <ng-container *ngIf="paragraphContent.nodeType === 'text'">
+                    <span *ngIf="estGras(paragraphContent.marks)">
+                      <strong>{{ paragraphContent.value }}</strong>
+                    </span>
+                    <span *ngIf="!estGras(paragraphContent.marks)">{{
+                      paragraphContent.value
+                    }}</span>
+                  </ng-container>
+                </ng-container>
+              </p>
+            </ng-container>
+            <ul *ngIf="content.nodeType === 'unordered-list'">
+              <li *ngFor="let listItem of content.content">
+                <ng-container *ngFor="let listItemContent of listItem.content">
+                  <ng-container
+                    *ngIf="listItemContent.nodeType === 'paragraph'"
+                  >
+                    <p *ngIf="listItemContent.content.length > 0">
+                      <ng-container
+                        *ngFor="
+                          let listItemParagraphContent of listItemContent.content
+                        "
+                      >
+                        <ng-container
+                          *ngIf="listItemParagraphContent.nodeType === 'text'"
+                        >
+                          <span *ngIf="estGras(listItemParagraphContent.marks)">
+                            <strong>{{
+                              listItemParagraphContent.value
+                            }}</strong>
+                          </span>
+                          <span
+                            *ngIf="!estGras(listItemParagraphContent.marks)"
+                            >{{ listItemParagraphContent.value }}</span
+                          >
+                        </ng-container>
+                      </ng-container>
+                    </p>
+                  </ng-container>
+                </ng-container>
+              </li>
+            </ul>
+          </ng-container>
+        </div>
+      </div>
+      <a (click)="seeArticle(aide)">Voir plus</a>
+    </div>
+  </div>
+  <div class="separator"></div>
+<app-obtenir-devis></app-obtenir-devis>
+<div class="separator"></div>
+<app-footer></app-footer>

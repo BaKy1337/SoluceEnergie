@@ -5,49 +5,6 @@
     background-position: center center;
     box-shadow: 0 58px 150px 0 rgba(0, 107, 184, .42);
     min-height: 100svh;
-    .navbar {
-      display: flex;
-      align-items: center;
-      padding: 0 3rem;
-      max-width: 1300px;
-      margin: auto;
-      justify-content: space-between;
-      .company__logo {
-        img {
-          width: 120px;
-          cursor: pointer;
-        }
-      }
-      .menu {
-        list-style-type: none;
-        display: flex;
-        gap: 2rem;
-        li {
-          transition: 0.3s;
-          a {
-            color: #fff;
-          }
-        }
-        li:hover {
-          transform: scale(1.1);
-          a {
-            color: #47bab8;
-          }
-        }
-      }
-      .contact__us {
-        transition: 0.3s;
-        display: flex;
-        gap: 1rem;
-        a {
-          color: #fff;
-          font-weight: 600;
-        }
-      }
-      .contact__us:hover {
-        transform: scale(1.1);
-      }
-    }
   
     .hero__content {
       padding: 4rem 3rem;
@@ -107,6 +64,29 @@
       }
     }
   }
+
+  .scrollToTop{
+    display: none;
+    cursor: pointer;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: #245A9C;
+    position: fixed;
+    bottom: 3.5rem;
+    right: 2.5rem;
+    border-radius: 2rem;
+    box-shadow: 5px 5px 50px 0 rgba(36, 90, 156, 0.3);
+    opacity: .75;
+    img{
+      width: 2.25rem;
+      position: fixed;
+      right: 2.65rem;
+      bottom: 3.65rem;
+    }
+  }
+  .active{
+    display: block;
+  }
   
   @keyframes rotate-center {
     0% {
@@ -119,50 +99,6 @@
   
   @media only screen and (max-width: 1300px) {
     .hero__section {
-      .navbar {
-        flex-wrap: wrap;
-        .company__logo {
-          width: 40%;
-        }
-        .menu {
-          width: 100%;
-          order: 3;
-          background-color: rgba(238, 238, 238, 0.8);
-          box-shadow: 25px 25px 100px 0 rgba(41, 95, 131, 0.25);
-          backdrop-filter: blur(8px);
-          padding: 1rem;
-          justify-content: center;
-          gap: 3rem;
-          border-radius: 0.5rem;
-          li {
-            a {
-              color: #202636;
-              font-weight: 500;
-              font-size: 0.875rem;
-            }
-          }
-          li:hover {
-            transform: scale(1);
-            a {
-              color: #202636;
-            }
-          }
-        }
-        .contact__us {
-          justify-content: end;
-          width: 60%;
-          a {
-            font-size: 0.875rem;
-          }
-          img {
-            width: 1.25rem;
-          }
-        }
-        .contact__us:hover {
-          transform: scale(1);
-        }
-      }
-  
       .hero__content {
         grid-template-columns: auto;
         gap: 2rem;
@@ -207,18 +143,6 @@
   
   @media only screen and (max-width: 768px) {
     .hero__section {
-      .navbar {
-        .menu {
-          display: grid;
-          grid-template-columns: auto auto;
-          gap: 1rem;
-          justify-content: space-around;
-        }
-        .contact__us {
-          a {
-          }
-        }
-      }
   
       .hero__content {
           gap: 1.5rem;

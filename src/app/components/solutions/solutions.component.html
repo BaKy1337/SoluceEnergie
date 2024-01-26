@@ -12,11 +12,13 @@
           <ul>
             <li *ngFor="let list of solution.list">{{list}}</li>
           </ul>
-          <div class="see__more">
-            <a href="#">En savoir plus</a>
+          <div class="see__more" style="cursor: pointer;" (click)="openDialog(solution.type)">
+            <a>En savoir plus</a>
             <img src="../../../assets/icons/search-zoom-in.svg" alt="icone en savoir plus">
           </div>
         </div>
       </div>
+      <img class="arrow arrow__left" src="../../../assets/icons/arrow_solution.svg" alt="flèche" (click)="slider.prev()">
+    <img class="arrow arrow__right" src="../../../assets/icons/arrow_solution.svg" alt="flèche" (click)="slider.next()">
     </div>
   </div>
