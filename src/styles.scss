@@ -40,6 +40,7 @@ $groupesoluceenergie-theme: mat.define-light-theme(
 @include mat.all-component-themes($groupesoluceenergie-theme);
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
+@import "~keen-slider/keen-slider.min.css";
 
 *,
 *::before,
@@ -122,7 +123,9 @@ a {
 
 .solutionContent {
   header {
-    text-align: center;
+    padding: 20px;
+    max-width: 1300px;
+    margin: 2rem auto;
 
     h1 {
       margin: 1rem auto 0;
@@ -131,12 +134,9 @@ a {
     }
 
     img {
-      max-width: 30rem;
-      width: -webkit-fill-available;
-      height: 10rem;
-      border-radius: 3rem;
+      width: 100%;
+      height: 25rem;
       margin: 1rem auto;
-      padding: 0 1rem;
       object-fit: cover;
     }
   }
@@ -170,4 +170,29 @@ a {
       margin-bottom: 1rem;
     }
   }
+}
+
+.mat-expansion-panel-header{
+  padding: 0 !important;
+  height: auto !important;
+}
+.mat-expansion-indicator{
+  padding: 0 1rem;
+}
+.mat-expansion-panel {
+  box-shadow: none !important;
+  background: transparent !important;
+  
+}
+.mat-expansion-panel-body{
+  margin-top: 1rem;
+  padding: 0 !important;
+}
+
+.mat-expansion-panel:not(.mat-expanded) .mat-expansion-panel-header:not([aria-disabled=true]):hover {
+  background: transparent !important;
+}
+
+.mat-expansion-indicator::after {
+  color: #47BAB8 !important;
 }

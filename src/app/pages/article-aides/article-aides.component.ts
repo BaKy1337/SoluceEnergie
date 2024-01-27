@@ -18,8 +18,5 @@ export class ArticleAidesComponent {
       this.aide = JSON.parse(params['data'] || '{}');
     });
   }
-  ngOnInit(){
-    console.log("aide: ",this.aide);
-  }
 
 }

@@ -99,8 +99,6 @@ export class ModalContactComponent {
     };
 
     this.selectedProjects.push(project);
-
-    console.log(this.selectedProjects);
     
   }
 }

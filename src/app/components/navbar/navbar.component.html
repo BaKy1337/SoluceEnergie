@@ -10,14 +10,14 @@
             <a (click)="scrollTo('certifications')" target="_self">Certifications</a>
         </li>
         <li>
-            <a routerLink="/">FAQ</a>
+            <a routerLink="/foire-aux-questions">FAQ</a>
         </li>
         <li>
             <a routerLink="/">Blog</a>
         </li>
     </ul>
-    <div class="contact__us">
-        <a (click)="scrollTo('contactform')">Contactez-nous</a>
+    <div class="contact__us" (click)="contactForm()">
+        <a>Contactez-nous</a>
         <img src="../../../assets/icons/messages-bulles.svg" alt="discussion icon">
     </div>
 </nav>

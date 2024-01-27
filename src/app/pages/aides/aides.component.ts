@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ContentfulService } from 'src/app/services/contentful.service';
 import shave from 'shave';
-import * as $ from 'jquery';
 import { MatDialog } from '@angular/material/dialog';
 import { ModalContactComponent } from 'src/app/components/modal-contact/modal-contact.component';
 import { Router } from '@angular/router';

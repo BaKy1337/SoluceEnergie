@@ -26,6 +26,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NavbarColoredComponent } from './components/navbar-colored/navbar-colored.component';
 import { ArticleAidesComponent } from './pages/article-aides/article-aides.component';
 import { ModalContactComponent } from './components/modal-contact/modal-contact.component';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 
 @NgModule({
@@ -56,7 +57,8 @@ import { ModalContactComponent } from './components/modal-contact/modal-contact.
     MatSnackBarModule,
     MatDialogModule,
     MatButtonModule,
-    HttpClientModule
+    HttpClientModule,
+    MatExpansionModule
   ],
   providers: [],
   bootstrap: [AppComponent]

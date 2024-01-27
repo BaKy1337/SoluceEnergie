@@ -101,8 +101,6 @@ export class ContactformComponent {
     };
 
     this.selectedProjects.push(project);
-
-    console.log(this.selectedProjects);
     
   }
 }

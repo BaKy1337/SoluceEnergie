@@ -13,6 +13,11 @@ export class ContentfulService {
     const url = `${this.apiUrl}?access_token=${this.accessToken}&content_type=aides`;
     return this.http.get(url);
   }
+
+  getFaq() {
+    const url = `${this.apiUrl}?access_token=${this.accessToken}&content_type=faq`;
+    return this.http.get(url);
+  }
 }
 
 
