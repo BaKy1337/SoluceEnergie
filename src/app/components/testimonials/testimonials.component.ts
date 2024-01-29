@@ -21,7 +21,7 @@ export class TestimonialsComponent {
     {
       title: "Gérard C.",
       location:"Frontignan, Occitanie",
-      text:"Je voulais mettre une pompe a chaleur et j'ai contacté plusieurs artisans. J'ai choisi soluce energie car Ouahid m'a rassuré avec ses reponses precises. La pompe a chaleur a été installé rapidement par une equipe tres gentille."
+      text:"Je voulais mettre une pompe a chaleur et j'ai contacté plusieurs artisans. J'ai choisi soluce energie car le conseiller m'a rassuré avec ses reponses precises. La pompe a chaleur a été installé rapidement par une equipe tres gentille."
     },
   ]
 }

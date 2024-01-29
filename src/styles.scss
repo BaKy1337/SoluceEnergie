@@ -196,3 +196,22 @@ a {
 .mat-expansion-indicator::after {
   color: #47BAB8 !important;
 }
+
+.BlogContent{
+  display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+@media screen and (max-width: 800px) {
+  .BlogContent{
+    p{
+      font-size: .875rem;
+    }
+    ul{
+      li{
+        font-size: .875rem;
+      }
+    }
+  }
+}

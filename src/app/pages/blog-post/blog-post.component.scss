@@ -1,0 +1,59 @@
+.post{
+    .back__btn {
+        cursor: pointer;
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        margin: 0 auto 2rem;
+        img {
+          width: 20px;
+        }
+        a {
+          color: #245a9c;
+          font-size: 1rem;
+          font-weight: bold;
+        }
+      }
+
+    max-width: 1300px;
+    margin: auto;
+    padding: 2rem;
+    .title{
+        background: #ffffff;
+        padding: 3rem 2rem;
+        text-align: center;
+        margin-bottom: 1rem;
+        border-radius: 0.25rem;
+        color: #202636;
+        font-size: 1.5rem;
+    }
+    .img__header{
+        max-height: 30rem;
+        width: 100%;
+        object-fit: cover;
+        object-position: 0 40%;
+        border-radius: .25rem;
+        margin-bottom: 2rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .post{
+        .title{
+            padding: 2rem 1rem;
+            font-size: 1.15rem;
+        }
+        .img__header{
+            max-height: 25rem;
+            width: 100%;
+            object-fit: cover;
+            object-position: 0 40%;
+            border-radius: .25rem;
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+.separator__section{
+    margin: 2rem auto;
+}

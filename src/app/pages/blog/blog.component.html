@@ -1,1 +1,29 @@
-<p>blog works!</p>
+<app-navbar-colored></app-navbar-colored>
+
+<div class="header">
+    <h1>La rénovation énergétique : un sujet important pour tous</h1>
+    <h3>Réduire votre consommation d'énergie et vos factures, tout en préservant l'environnement</h3>
+    <p>La rénovation énergétique est un investissement qui vous permettra de faire des économies d'énergie et de réduire votre impact sur l'environnement.</p>
+</div>
+
+
+<div *ngIf="loading;then content else other_content"></div>
+
+<ng-template #content>
+    <div class="colorful"></div>
+</ng-template>
+
+<ng-template #other_content><div class="blog">
+    <!-- data.items[0].fields.image.fields.file.url -->
+    <div class="article" *ngFor="let article of listPosts">
+        <img src="https:{{article.image}}" alt="">
+        <h1>{{article.title}}</h1>
+        <div class="shaveContent" [innerHTML]="article.contenu"></div>
+        <a (click)="openPost(article)">Voir l'article</a>
+    </div>
+</div></ng-template>
+
+<div class="separator__section"></div>
+<app-obtenir-devis></app-obtenir-devis>
+<div class="separator__section"></div>
+<app-footer></app-footer>

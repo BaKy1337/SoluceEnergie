@@ -27,6 +27,7 @@ import { NavbarColoredComponent } from './components/navbar-colored/navbar-color
 import { ArticleAidesComponent } from './pages/article-aides/article-aides.component';
 import { ModalContactComponent } from './components/modal-contact/modal-contact.component';
 import {MatExpansionModule} from '@angular/material/expansion';
+import { BlogPostComponent } from './pages/blog-post/blog-post.component';
 
 
 @NgModule({
@@ -49,6 +50,7 @@ import {MatExpansionModule} from '@angular/material/expansion';
     NavbarColoredComponent,
     ArticleAidesComponent,
     ModalContactComponent,
+    BlogPostComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,18 @@
+<app-navbar-colored></app-navbar-colored>
+
+<div class="post">
+    <div class="back__btn" routerLink="/blog">
+        <img src="../../../assets/icons/arrow_left.svg" alt="flèche retour">
+        <a>Retour</a>
+    </div>
+
+    <h1 class="title">{{selectedPost.title}}</h1>
+    <img class="img__header" src="https:{{selectedPost.image}}" alt="">
+
+    <div class="BlogContent" [innerHTML]="selectedPost.contenu"></div>
+</div>
+
+<div class="separator__section"></div>
+<app-obtenir-devis></app-obtenir-devis>
+<div class="separator__section"></div>
+<app-footer></app-footer>
