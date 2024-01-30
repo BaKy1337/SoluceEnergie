@@ -29,6 +29,7 @@ import { ModalContactComponent } from './components/modal-contact/modal-contact.
 import {MatExpansionModule} from '@angular/material/expansion';
 import { BlogPostComponent } from './pages/blog-post/blog-post.component';
 import { PolitiqueDeConfidentialiteComponent } from './pages/politique-de-confidentialite/politique-de-confidentialite.component';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 
 @NgModule({
@@ -64,7 +65,7 @@ import { PolitiqueDeConfidentialiteComponent } from './pages/politique-de-confid
     HttpClientModule,
     MatExpansionModule
   ],
-  providers: [],
+  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
