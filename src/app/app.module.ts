@@ -28,6 +28,7 @@ import { ArticleAidesComponent } from './pages/article-aides/article-aides.compo
 import { ModalContactComponent } from './components/modal-contact/modal-contact.component';
 import {MatExpansionModule} from '@angular/material/expansion';
 import { BlogPostComponent } from './pages/blog-post/blog-post.component';
+import { PolitiqueDeConfidentialiteComponent } from './pages/politique-de-confidentialite/politique-de-confidentialite.component';
 
 
 @NgModule({
@@ -51,6 +52,7 @@ import { BlogPostComponent } from './pages/blog-post/blog-post.component';
     ArticleAidesComponent,
     ModalContactComponent,
     BlogPostComponent,
+    PolitiqueDeConfidentialiteComponent,
   ],
   imports: [
     BrowserModule,

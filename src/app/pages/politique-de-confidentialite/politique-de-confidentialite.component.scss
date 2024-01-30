@@ -1,0 +1,34 @@
+.content{
+    max-width: 1300px;
+    padding: 2rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    h1{
+        color: #47BAB8;
+        font-size: 1.5rem;
+    }
+    h2{
+        color: #202636;
+        font-size: 1.5rem;
+    }
+    p{
+        color: #202636;
+        margin-bottom: .5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .content{
+        h1{
+            font-size: 1.25rem;
+        }
+        h2{
+            font-size: 1rem;
+        }
+        p{
+            font-size: .875rem;
+        }
+    }
+}

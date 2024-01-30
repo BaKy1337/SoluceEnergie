@@ -6,6 +6,7 @@ import { FaqComponent } from './pages/faq/faq.component';
 import { BlogComponent } from './pages/blog/blog.component';
 import { ArticleAidesComponent } from './pages/article-aides/article-aides.component';
 import { BlogPostComponent } from './pages/blog-post/blog-post.component';
+import { PolitiqueDeConfidentialiteComponent } from './pages/politique-de-confidentialite/politique-de-confidentialite.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/accueil', pathMatch: 'full'},
@@ -14,7 +15,8 @@ const routes: Routes = [
   { path: 'foire-aux-questions', component: FaqComponent },
   { path: 'blog', component: BlogComponent },
   { path: 'blog/article', component: BlogPostComponent },
-  { path: 'aides-renovation-energetique/article', component: ArticleAidesComponent }
+  { path: 'aides-renovation-energetique/article', component: ArticleAidesComponent },
+  { path: 'politique-de-confidentialite', component: PolitiqueDeConfidentialiteComponent }
 ];
 
 @NgModule({
