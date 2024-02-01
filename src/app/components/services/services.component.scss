@@ -34,15 +34,16 @@
   grid-auto-rows: 1fr;
   grid-column-gap: 2rem;
   grid-row-gap: 2rem;
+  position: relative;
 }
 
 .col {
-  background: #ffffff;
   padding: 1.5rem 2.25rem;
-  border: 2px solid #fff;
-  background: rgba(255, 255, 255, 0.8);
-  box-shadow: 25px 25px 100px 0 rgba(40, 94, 130, 0.08);
-  border-radius: 1.5rem;
+    border: 2px solid #fff;
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 25px 25px 100px 0 rgba(40, 94, 130, 0.08);
+    border-radius: 1.5rem;
+    z-index: 2;
   .icon {
     background: rgba(71, 186, 184, 0.2);
     margin: .5rem auto;
