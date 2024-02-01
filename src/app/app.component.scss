@@ -1,0 +1,143 @@
+.menu-spacer {
+  flex: 1 1 auto;
+}
+
+.menu__icon{
+  display: none;
+}
+
+.navbar{
+    transition: 0.3s;
+    display: flex;
+    box-sizing: border-box;
+    padding: 0 2rem;
+    width: 95%;
+    flex-direction: row;
+    align-items: center;
+    white-space: nowrap;
+    max-width: 1300px;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    .logo_icon{
+        max-width: 120px;
+    }
+    .contact__us__navbar {
+      margin-left: 6rem;
+    }
+    a{
+        color: #fff;
+        img{
+            filter: invert(100%) sepia(1%) saturate(0%) hue-rotate(225deg) brightness(101%) contrast(101%);
+        }
+    }
+}
+
+.navbar__scrolled{
+  top: 1rem;
+  border-radius: 1.5rem;
+  z-index: 99;
+  background: rgb(71 186 184 / 60%);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  a{
+    color: #fff !important;
+    img{
+      filter: invert(100%) sepia(1%) saturate(0%) hue-rotate(225deg) brightness(101%) contrast(101%);
+    }
+  }
+}
+
+.navbarheight{
+    min-height: 120px;
+}
+
+.menu__colored{
+  a{
+    color: #202636;
+    img{
+      filter: invert(70%) sepia(15%) saturate(1488%) hue-rotate(130deg) brightness(91%) contrast(84%);
+    }
+  }
+}
+
+.sidebar {
+  transition: 0.2s;
+    min-height: 100svh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    right: -100%;
+    backdrop-filter: blur(5px);
+}
+
+.sidebar__content{
+  position: fixed;
+  right: 0;
+  min-height: 100svh;
+  background: #fafafa;
+  width: fit-content;
+  display: flex;
+    flex-direction: column;
+  .icon__close{
+    cursor: pointer;
+    height: 24px;
+    display: flex;
+    align-self: end;
+    margin: 2rem;
+    filter: invert(75%) sepia(21%) saturate(1051%) hue-rotate(129deg) brightness(84%) contrast(84%);
+  }
+}
+
+.sidebar__menu{
+  display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0 6rem 0 2rem;
+    a{
+      color: #202636;
+    }
+    .contact__us__navbar{
+      margin-top: 4rem;
+      display: flex;
+      gap: .5rem;
+      img{
+        filter: invert(75%) sepia(21%) saturate(1051%) hue-rotate(129deg) brightness(84%) contrast(84%);
+      }
+    }
+}
+
+.opened__sidebar {
+  right: 0;
+}
+
+@media screen and (max-width: 960px) {
+.menu-spacer{
+  display: none;
+}
+.menu__desktop{
+  display: none;
+}
+
+.menu__icon{
+  height: 2rem;
+  display: block;
+  cursor: pointer;
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(352deg) brightness(104%) contrast(101%);
+  img{
+    height: 2rem;
+  }
+}
+
+.menu__icon__colored{
+  filter: invert(75%) sepia(21%) saturate(1051%) hue-rotate(129deg) brightness(84%) contrast(84%) !important;
+}
+
+.navbar{
+  justify-content: space-between;
+}
+
+}

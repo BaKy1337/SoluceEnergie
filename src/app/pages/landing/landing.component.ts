@@ -6,16 +6,14 @@ import { Component, HostListener } from '@angular/core';
   styleUrls: ['./landing.component.scss']
 })
 export class LandingComponent {
-  @HostListener("window:scroll", []) onWindowScroll() {
-    if(window.scrollY > 150){
-      if (!document.getElementById('scrollToTop')?.classList.contains("active")) {
-        document.getElementById('scrollToTop')?.classList.add('active')
-      }
-    }else{
-      if (document.getElementById('scrollToTop')?.classList.contains("active")) {
-        document.getElementById('scrollToTop')?.classList.remove('active')
-      }
-    }
+@HostListener('window:scroll', []) onWindowScroll() {
+  window.scrollY > 150
+    ? !document.getElementById('scrollToTop')?.classList.contains('active')
+      ? document.getElementById('scrollToTop')?.classList.add('active')
+      : ''
+    : document.getElementById('scrollToTop')?.classList.contains('active')
+    ? document.getElementById('scrollToTop')?.classList.remove('active')
+    : '';
 }
 
   scrollToTop(){

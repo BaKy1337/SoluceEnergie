@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ModalContactComponent } from '../modal-contact/modal-contact.component';
+import { FonctionsglobalesService } from 'src/app/services/fonctionsglobales.service';
 
 @Component({
   selector: 'app-navbar',
@@ -8,8 +9,10 @@ import { ModalContactComponent } from '../modal-contact/modal-contact.component'
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent {
-
-  constructor(public dialog: MatDialog){}
+  isNavbarColored!:boolean;
+  constructor(public dialog: MatDialog, public fonctionGlobales: FonctionsglobalesService){
+    this.isNavbarColored = this.fonctionGlobales.isNavbarColored;
+  }
 
 
   scrollTo(target:string){

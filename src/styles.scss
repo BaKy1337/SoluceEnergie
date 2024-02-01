@@ -215,3 +215,10 @@ a {
     }
   }
 }
+
+.contact__us__navbar{
+  .mdc-button__label{
+    display: flex;
+    gap: .5rem;
+  }
+}

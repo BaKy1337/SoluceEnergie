@@ -1,1 +1,46 @@
+<div id="navbarheight"></div>
+<nav class="navbar" id="navbar">
+  <div *ngIf="isNavbarColored;then content else other_content"></div>
+
+    <ng-template #content>
+      <img style="cursor: pointer; padding: 2rem 0;" routerLink="/" src="../assets/logo_couleur.svg" alt="SOLUCE ENERGIE company logo" class="logo_icon">
+    </ng-template>
+
+    <ng-template #other_content>
+      <img style="cursor: pointer;" routerLink="/" src="../assets/logo_white.svg" alt="SOLUCE ENERGIE company logo" class="logo_icon">
+    </ng-template>
+
+
+    
+      <span class="menu-spacer"></span>
+      <div fxShow="true" fxHide.lt-md [ngClass]="isNavbarColored ? 'menu__colored':''" class="menu__desktop">
+        <a routerLink="/aides-renovation-energetique"  mat-button>Vos aides</a>
+        <a (click)="scrollTo('certifications')" target="_self" mat-button *ngIf="currentUrl == '/'">Certifications</a>
+        <a routerLink="/foire-aux-questions" mat-button>FAQ</a>
+        <a routerLink="/blog" mat-button>Blog</a>
+        <a class="contact__us__navbar" (click)="contactForm()" mat-button>Contactez-nous <img src="../../../assets/icons/messages-bulles.svg" alt="discussion icon"></a>
+        
+      </div>
+      <div [ngClass]="isNavbarColored ? 'menu__icon menu__icon__colored':'menu__icon'">
+        <a (click)="toggleSidebar()" mat-button><img src="../assets/icons/menu.svg" alt="icone de menu" ></a>
+        
+      </div>
+</nav>
+
+<div class="sidebar" id="sidebar">
+  <div class="sidebar__content">
+    <img src="../assets/icons/close_menu.svg" alt="icone fermer" class="icon__close" (click)="toggleSidebar()">
+    
+    <div class="sidebar__menu">
+      <a routerLink="/aides-renovation-energetique" (click)="toggleSidebar()">Vos aides</a>
+        <a (click)="scrollTo('certifications')" target="_self" *ngIf="currentUrl == '/'" (click)="toggleSidebar()">Certifications</a>
+        <a routerLink="/foire-aux-questions" (click)="toggleSidebar()">FAQ</a>
+        <a routerLink="/blog" (click)="toggleSidebar()">Blog</a>
+        <a class="contact__us__navbar" (click)="contactForm()" (click)="toggleSidebar()">Contactez-nous <img src="../../../assets/icons/messages-bulles.svg" alt="discussion icon"></a>
+    </div>
+  </div>
+</div>
+<!-- <div class="toggle">
+    <a (click)="toggleSidebar()">Toogle</a>
+</div> -->
 <router-outlet></router-outlet>
